@@ -1,5 +1,3 @@
-DROP PROCEDURE IF EXISTS spGetMovieByName;
-
 CREATE PROCEDURE [dbo].[spGetMovieByName]
     @Name NVARCHAR(100)
 AS
@@ -19,16 +17,16 @@ INSERT INTO [dbo].[Cinema] ([Name], [State]) VALUES
     ('Cine Sur', 1);
 GO
 
--- Insertar películas
+-- Insertar peliculas
 INSERT INTO [dbo].[Movies] ([Name], [Duration], [IsDeleted]) VALUES 
     ('El Viaje Infinito', 120, 0),
-    ('La Última Frontera', 105, 0),
+    ('La ultima Frontera', 105, 0),
     ('Sombras del Pasado', 98, 0),
     ('Comedia Invisible', 110, 1),
     ('Drama Perdido', 95, 1);
 GO
 
--- Asignar películas a cines (con fechas pasadas, actuales y futuras)
+-- Asignar peliculas a cines (con fechas pasadas, actuales y futuras)
 INSERT INTO [dbo].[CinemaMovies] ([CinemaId], [MovieId], [ReleaseDate], [EndDate]) VALUES 
     (1, 1, DATEADD(DAY, -10, GETDATE()), DATEADD(DAY, 10, GETDATE())),
     (1, 2, DATEADD(DAY, -30, GETDATE()), DATEADD(DAY, -15, GETDATE())),
@@ -36,3 +34,7 @@ INSERT INTO [dbo].[CinemaMovies] ([CinemaId], [MovieId], [ReleaseDate], [EndDate
     (2, 4, DATEADD(DAY, -20, GETDATE()), DATEADD(DAY, -5, GETDATE())),
     (1, 5, DATEADD(DAY, 5, GETDATE()), DATEADD(DAY, 15, GETDATE()));
 GO
+
+select * from movies
+select * from CinemaMovies
+select * from Cinema
