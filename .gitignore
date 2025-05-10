@@ -1,0 +1,54 @@
+﻿## Archivos de compilación
+bin/
+obj/
+
+## Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## VS Code
+.vscode/
+
+## Archivos de configuración de Mac y Windows
+.DS_Store
+Thumbs.db
+
+## Archivos de logs
+*.log
+
+## Archivos de publicación
+publish/
+out/
+
+## Paquetes NuGet
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+
+## Configuración de IIS Express
+*.vspscc
+*.vssscc
+*.dbmdl
+
+## Archivos generados por test
+TestResults/
+*.coverage
+*.coveragejson
+
+## Secretos y configuración local
+secrets.json
+appsettings.Development.json
+appsettings.Local.json
+.env
+
+## Archivos temporales
+*.tmp
+*.bak
+
+## Archivos de Rider (JetBrains)
+.idea/
+*.sln.iml
